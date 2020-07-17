@@ -2,6 +2,14 @@
 #include <GL/freeglut.h>
 using namespace std;
 
+bool mouseDown = false; 
+
+float xrot = 0.0f;
+float yrot = 0.0f;
+
+float xdiff = 0.0f;
+float ydiff = 0.0f;
+
 void drawRectangle(float x, float y, float z, float dx, float dy, float dz) {
 	// Belakang
 	//glColor3f(1.0, 0.0, 0.0);
@@ -729,7 +737,7 @@ void display() {
 	drawBuildingE();
 
 	glPopMatrix();
-
+	glFlush();
 	glutSwapBuffers();
 }
 
@@ -796,12 +804,39 @@ void reshape(int width, int height) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(50.0, width / height, 5.0, 1000.0);
-	glTranslatef(0.0, 0.0, -500.0); 
+	glTranslatef(0.0, 0.0, -1000.0);
 	if (width >= height)
 		glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 	else
 		glViewport(0, 0, (GLsizei)width, (GLsizei)width);
 	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+}
+
+void mouse(int button, int state, int x, int y)
+{
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+	{
+		mouseDown = true;
+		xdiff = (x + xrot);
+		ydiff = (-y + yrot);
+	}
+	else
+		mouseDown = false;
+}
+
+void mouseMotion(int x, int y){
+	if (mouseDown)
+	{
+		xrot = (y + ydiff) / 150;
+		yrot = (x - xdiff) / 150;
+
+		glutPostRedisplay();
+
+
+		glRotatef(xrot, 1.0f, 0.0f, 0.0f); 
+		glRotatef(yrot, 0.0f, 1.0f, 0.0f); 
+	}
 }
 
 void myinit() {
@@ -816,7 +851,7 @@ void myinit() {
 	glEnable(GL_BLEND);
 	//glEnable(GL_LIGHTING);
 	//glEnable(GL_LIGHT0);
-	gluOrtho2D(-500.0, 500.0, -500.0, 500.0);
+	//gluOrtho2D(-500.0, 500.0, -500.0, 500.0);
 }
 
 int main(int argc, char** argv) {
@@ -830,6 +865,8 @@ int main(int argc, char** argv) {
 	glutKeyboardFunc(keyFun);
 	glutSpecialFunc(keySpecialFun);
 	glutReshapeFunc(reshape);
+	glutMouseFunc(mouse);
+	glutMotionFunc(mouseMotion);
 
 	myinit();
 	glutMainLoop();
