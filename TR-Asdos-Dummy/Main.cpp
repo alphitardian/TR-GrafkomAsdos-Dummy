@@ -718,6 +718,43 @@ void drawBuildingC() {
 		spacingB -= 15.0;
 	}
 
+
+	glColor3fv(color.glass);
+	glBegin(GL_QUADS);
+	glVertex3f(100.0, 100.0, 350); //P
+	glVertex3f(150.0, 100.0, 300); //O
+	glVertex3f(150.0, 170.0, 300); //O-up
+	glVertex3f(100.0, 170.0, 350); //P-up
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(100.0, 100.0, 350); //P
+	glVertex3f(62.5, 100.0, 300); //O
+	glVertex3f(62.5, 170.0, 300); //O-up
+	glVertex3f(100.0, 170.0, 350); //P-up
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(150.0, 100.0, 300); //P
+	glVertex3f(100, 100.0, 220); //O
+	glVertex3f(100, 170.0, 220); //O-up
+	glVertex3f(150.0, 170.0, 300); //P-up
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(100, 100.0, 350); //P
+	glVertex3f(62.5, 100.0, 300); //O
+	glVertex3f(100, 100.0, 220); //O
+	glVertex3f(150.0, 100.0, 300); //P-up
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(100, 170.0, 350); //P
+	glVertex3f(62.5, 170.0, 300); //O
+	glVertex3f(100, 170.0, 220); //O
+	glVertex3f(150.0, 170.0, 300); //P-up
+	glEnd();
+
 	glColor3fv(color.white);
 	//depan
 	glBegin(GL_POLYGON);
