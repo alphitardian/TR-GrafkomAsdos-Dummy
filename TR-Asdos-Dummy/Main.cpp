@@ -405,7 +405,6 @@ void drawBuildingA() {
 	glVertex3f(200.0, 60.0, 321.0);
 	glVertex3f(375.0, 60.0, 346.0);
 	glEnd();
-
 	glColor3f(0.3, 0.3, 0.3);
 	glBegin(GL_POLYGON);
 	glVertex3f(310.0, 60.0, 341.0);
@@ -911,6 +910,89 @@ void drawBuildingC() {
 	glVertex3f(0.0, 55.0, 34.5); //Q
 	glVertex3f(0.0, 200.0, 34.5); //Q-up
 	glVertex3f(125.0, 200.0, 49.5); //R-up
+	glEnd();
+
+
+	//top detail
+	glColor3fv(color.lightGrey);
+	//atas
+	glBegin(GL_POLYGON);
+	glVertex3f(15.0, 560.0, 60.0); //P
+	glVertex3f(50.0, 560.0, 60.0); //O
+	glVertex3f(50.0, 560.0, 225.0); //R
+	glVertex3f(15.0, 560.0, 225.0); //Q
+	glEnd();
+
+	//depan
+	glBegin(GL_POLYGON);
+	glVertex3f(50.0, 560.0, 225.0); //P
+	glVertex3f(15.0, 560.0, 225.0); //O
+	glVertex3f(15.0, 550.0, 225.0); //R
+	glVertex3f(50.0, 550.0, 225.0); //Q
+	glEnd();
+
+	//belakang
+	glBegin(GL_POLYGON);
+	glVertex3f(50.0, 560.0, 60.0); //P
+	glVertex3f(15.0, 560.0, 60.0); //O
+	glVertex3f(15.0, 550.0, 60.0); //R
+	glVertex3f(50.0, 550.0, 60.0); //Q
+	glEnd();
+
+	//kanan
+	glBegin(GL_POLYGON);
+	glVertex3f(50.0, 560.0, 225.0);
+	glVertex3f(50.0, 560.0, 60.0);
+	glVertex3f(50.0, 550.0, 60.0);
+	glVertex3f(50.0, 550.0, 225.0);
+	glEnd();
+
+	//kiri
+	glBegin(GL_POLYGON);
+	glVertex3f(15.0, 560.0, 225.0);
+	glVertex3f(15.0, 560.0, 60.0);
+	glVertex3f(15.0, 550.0, 60.0);
+	glVertex3f(15.0, 550.0, 225.0);
+	glEnd();
+
+	//cabang atas
+	glBegin(GL_POLYGON);
+	glVertex3f(5.0, 560.0, 150.0); //P
+	glVertex3f(15.0, 560.0, 150.0); //O
+	glVertex3f(15.0, 560.0, 190.0); //R
+	glVertex3f(5.0, 560.0, 190.0); //Q
+	glEnd();
+
+	// cabang depan
+	glBegin(GL_POLYGON);
+	glVertex3f(5.0, 560.0, 190.0);
+	glVertex3f(15.0, 560.0, 190.0);
+	glVertex3f(15.0, 550.0, 190.0);
+	glVertex3f(5.0, 550.0, 190.0);
+	glEnd();
+
+	//cabang belakang
+	glBegin(GL_POLYGON);
+	glVertex3f(5.0, 560.0, 150.0);
+	glVertex3f(15.0, 560.0, 150.0);
+	glVertex3f(15.0, 550.0, 150.0);
+	glVertex3f(5.0, 550.0, 150.0);
+	glEnd();
+
+	//cabang kanan
+	glBegin(GL_POLYGON);
+	glVertex3f(15.0, 560.0, 150.0);
+	glVertex3f(15.0, 560.0, 190.0);
+	glVertex3f(15.0, 550.0, 190.0);
+	glVertex3f(15.0, 550.0, 150.0);
+	glEnd();
+
+	//cabang kiri
+	glBegin(GL_POLYGON);
+	glVertex3f(5.0, 560.0, 150.0);
+	glVertex3f(5.0, 560.0, 190.0);
+	glVertex3f(5.0, 550.0, 190.0);
+	glVertex3f(5.0, 550.0, 150.0);
 	glEnd();
 }
 
