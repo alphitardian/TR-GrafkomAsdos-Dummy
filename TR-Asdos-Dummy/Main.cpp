@@ -647,6 +647,53 @@ void drawBuildingD() {
 	glEnd();
 
 	//detail
+	glColor3f(0.3, 0.3, 0.3);
+	glBegin(GL_POLYGON);
+	glVertex3f(-270.0, 350.0, 273.5); //S
+	glVertex3f(-275.0, 350.0, 273.0); //T
+	glVertex3f(-275.0, 650.0, 273.0); //T
+	glVertex3f(-270.0, 650.0, 273.5); //S
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(-300.0, 350.0, 270.0); //S
+	glVertex3f(-310.0, 350.0, 269.2); //T
+	glVertex3f(-310.0, 650.0, 269.2); //T
+	glVertex3f(-300.0, 650.0, 270.0); //S
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(-345.0, 350.0, 266.0); //S
+	glVertex3f(-355.0, 350.0, 264.0); //T
+	glVertex3f(-355.0, 650.0, 264.0); //T
+	glVertex3f(-345.0, 650.0, 266.0); //S
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(-385.0, 350.0, 255.0); //T
+	glVertex3f(-390.0, 350.0, 253.5); //U
+	glVertex3f(-390.0, 650.0, 253.5); //U
+	glVertex3f(-385.0, 650.0, 255.0); //T
+	glEnd();
+	glColor4f(0.3, 0.3, 0.3, 0.3);
+	//depan1
+	glBegin(GL_POLYGON);
+	glVertex3f(-250.0, 345.0, 275.5); //S
+	glVertex3f(-350.0, 345.0, 265.5); //T
+	glVertex3f(-350.0, 350.0, 265.5); //T
+	glVertex3f(-250.0, 350.0, 275.5); //S
+	glEnd();
+	//depan2
+	glBegin(GL_POLYGON);
+	glVertex3f(-350.0, 345.0, 265.5); //T
+	glVertex3f(-400.0, 345.0, 250.5); //U
+	glVertex3f(-400.0, 350.0, 250.5); //U
+	glVertex3f(-350.0, 350.0, 265.5); //T
+	glEnd();
+	//kiri
+	glBegin(GL_POLYGON);
+	glVertex3f(-400.5, 345.0, 250.0); //U
+	glVertex3f(-400.5, 345.0, 200.0); //V
+	glVertex3f(-400.5, 350.0, 200.0); //V
+	glVertex3f(-400.5, 350.0, 250.0); //U
+	glEnd();
 }
 
 void drawBuildingE() {
@@ -842,7 +889,7 @@ void reshape(int width, int height) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(50.0, width / height, 5.0, 1000.0);
-	glTranslatef(0.0, 0.0, -1000.0);
+	glTranslatef(-25.0, -100.0, -500.0);
 	if (width >= height)
 		glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 	else
