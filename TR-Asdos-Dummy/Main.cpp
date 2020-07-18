@@ -1156,7 +1156,54 @@ void drawBuildingF() {
 }
 
 void drawBuildingG() {
+	glColor3f(1.0, 0.0, 0.0);
+	//bawah
+	glBegin(GL_POLYGON);
+	glVertex3f(-350.0, 55.0, 180.0); //depan
+	glVertex3f(-350.0, 55.0, 75.0); //belakang
+	glVertex3f(-550.0, 55.0, 75.0); //belakang
+	glVertex3f(-500.0, 55.0, 180.0); //depan
+	glEnd();
 
+	//atas
+	glBegin(GL_POLYGON);
+	glVertex3f(-350.0, 400.0, 180.0); //depan
+	glVertex3f(-350.0, 400.0, 75.0); //belakang
+	glVertex3f(-550.0, 400.0, 75.0); //belakang
+	glVertex3f(-500.0, 400.0, 180.0); //depan
+	glEnd();
+
+	//kanan
+	glBegin(GL_POLYGON);
+	glVertex3f(-500.0, 55.0, 180.0); //depan
+	glVertex3f(-550.0, 55.0, 75.0); //belakang
+	glVertex3f(-550.0, 400.0, 75.0); //belakang
+	glVertex3f(-500.0, 400.0, 180.0); //depan
+	glEnd();
+
+	//kiri
+	glBegin(GL_POLYGON);
+	glVertex3f(-350.0, 55.0, 180.0); //depan
+	glVertex3f(-350.0, 55.0, 75.0); //belakang
+	glVertex3f(-350.0, 400.0, 75.0); //belakang
+	glVertex3f(-350.0, 400.0, 180.0); //depan
+	glEnd();
+
+	//depan
+	glBegin(GL_POLYGON);
+	glVertex3f(-350.0, 55.0, 180.0); //depan
+	glVertex3f(-500.0, 55.0, 180.0); //depan
+	glVertex3f(-500.0, 400.0, 180.0); //depan
+	glVertex3f(-350.0, 400.0, 180.0); //depan
+	glEnd();
+
+	//belakang
+	glBegin(GL_POLYGON);
+	glVertex3f(-350.0, 55.0, 75.0); //belakang
+	glVertex3f(-550.0, 55.0, 75.0); //belakang
+	glVertex3f(-550.0, 400.0, 75.0); //belakang
+	glVertex3f(-350.0, 400.0, 75.0); //belakang
+	glEnd();
 }
 
 
@@ -1195,6 +1242,7 @@ void display() {
 	drawBuildingD();
 	drawBuildingE();
 	drawBuildingF();
+	drawBuildingG();
 
 	glPopMatrix();
 	glFlush();
