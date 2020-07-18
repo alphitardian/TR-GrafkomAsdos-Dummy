@@ -21,6 +21,7 @@ public:
 	GLfloat black[3] = { 0,0,0 };
 	GLfloat white[3] = { 1,1,1 };
 	GLfloat lightGrey[3] = { 0.8,0.8,0.8 };
+	GLfloat orange[3] = { 1.0, 0.5, 0.0 };
 };
 
 void drawOther() {
@@ -214,57 +215,233 @@ void drawBuildingA() {
 	glVertex3f(287.5, 120.0, 100.0); // tengah-blkg atas
 	glEnd();
 
-	glColor3f(1.0, 0.5, 0.0);
-	//pilar
+	glColor3fv(color.orange);
+	//pilar 1
 	glBegin(GL_POLYGON);
-	glVertex3f(370.0, 55.0, 349.5);
-	glVertex3f(365.0, 55.0, 349.0);
-	glVertex3f(365.0, 80.0, 349.0);
-	glVertex3f(370.0, 80.0, 349.5);
+	glVertex3f(370.0, 55.0, 346.5);
+	glVertex3f(365.0, 55.0, 346.0);
+	glVertex3f(365.0, 80.0, 346.0);
+	glVertex3f(370.0, 80.0, 346.5);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(340.0, 55.0, 345.0);
-	glVertex3f(335.0, 55.0, 344.5);
-	glVertex3f(335.0, 80.0, 344.5);
-	glVertex3f(340.0, 80.0, 345.0);
+	glVertex3f(370.0, 55.0, 344.5);
+	glVertex3f(365.0, 55.0, 344.0);
+	glVertex3f(365.0, 80.0, 344.0);
+	glVertex3f(370.0, 80.0, 344.5);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(310.0, 55.0, 341.0);
-	glVertex3f(305.0, 55.0, 340.5);
-	glVertex3f(305.0, 80.0, 340.5);
-	glVertex3f(310.0, 80.0, 341.0);
+	glVertex3f(365.0, 55.0, 344.0);
+	glVertex3f(365.0, 55.0, 346.5);
+	glVertex3f(365.0, 80.0, 346.5);
+	glVertex3f(365.0, 80.0, 344.0);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(270.0, 55.0, 335.0);
-	glVertex3f(265.0, 55.0, 334.5);
-	glVertex3f(265.0, 80.0, 334.5);
-	glVertex3f(270.0, 80.0, 335.0);
+	glVertex3f(370.0, 55.0, 344.0);
+	glVertex3f(370.0, 55.0, 346.5);
+	glVertex3f(370.0, 80.0, 346.5);
+	glVertex3f(370.0, 80.0, 344.0);
+	glEnd();
+
+	// pilar 2
+	glBegin(GL_POLYGON);
+	glVertex3f(340.0, 55.0, 343.0);
+	glVertex3f(335.0, 55.0, 342.5);
+	glVertex3f(335.0, 80.0, 342.5);
+	glVertex3f(340.0, 80.0, 343.0);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(240.0, 55.0, 331.0);
-	glVertex3f(235.0, 55.0, 330.5);
-	glVertex3f(235.0, 80.0, 330.5);
-	glVertex3f(240.0, 80.0, 331.0);
+	glVertex3f(340.0, 55.0, 341.0);
+	glVertex3f(335.0, 55.0, 340.5);
+	glVertex3f(335.0, 80.0, 340.5);
+	glVertex3f(340.0, 80.0, 341.0);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(210.0, 55.0, 326.5);
-	glVertex3f(205.0, 55.0, 326.0);
-	glVertex3f(205.0, 80.0, 326.0);
-	glVertex3f(210.0, 80.0, 326.5);
+	glVertex3f(335.0, 55.0, 343.0);
+	glVertex3f(335.0, 55.0, 340.5);
+	glVertex3f(335.0, 80.0, 340.5);
+	glVertex3f(335.0, 80.0, 343.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(340.0, 55.0, 343.0);
+	glVertex3f(340.0, 55.0, 340.5);
+	glVertex3f(340.0, 80.0, 340.5);
+	glVertex3f(340.0, 80.0, 343.0);
+	glEnd();
+
+
+	// pilar 3
+
+	glBegin(GL_POLYGON);
+	glVertex3f(310.0, 55.0, 339.0);
+	glVertex3f(305.0, 55.0, 338.5);
+	glVertex3f(305.0, 80.0, 338.5);
+	glVertex3f(310.0, 80.0, 339.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(310.0, 55.0, 337.0);
+	glVertex3f(305.0, 55.0, 336.5);
+	glVertex3f(305.0, 80.0, 336.5);
+	glVertex3f(310.0, 80.0, 337.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(305.0, 55.0, 336.5);
+	glVertex3f(305.0, 55.0, 339.0);
+	glVertex3f(305.0, 80.0, 339.0);
+	glVertex3f(305.0, 80.0, 336.5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(310.0, 55.0, 336.5);
+	glVertex3f(310.0, 55.0, 339.0);
+	glVertex3f(310.0, 80.0, 339.0);
+	glVertex3f(310.0, 80.0, 336.5);
+	glEnd();
+
+	// pilar 4
+
+	glBegin(GL_POLYGON);
+	glVertex3f(270.0, 55.0, 333.0);
+	glVertex3f(265.0, 55.0, 332.5);
+	glVertex3f(265.0, 80.0, 332.5);
+	glVertex3f(270.0, 80.0, 333.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(270.0, 55.0, 331.0);
+	glVertex3f(265.0, 55.0, 330.5);
+	glVertex3f(265.0, 80.0, 330.5);
+	glVertex3f(270.0, 80.0, 331.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(265.0, 55.0, 332.5);
+	glVertex3f(265.0, 55.0, 330.5);
+	glVertex3f(265.0, 80.0, 330.5);
+	glVertex3f(265.0, 80.0, 332.5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(270, 55.0, 333.0);
+	glVertex3f(270.0, 55.0, 331.5);
+	glVertex3f(270.0, 80.0, 331.5);
+	glVertex3f(270.0, 80.0, 333.0);
+	glEnd();
+
+	// pilar 5
+
+	glBegin(GL_POLYGON);
+	glVertex3f(240.0, 55.0, 329.0);
+	glVertex3f(235.0, 55.0, 328.5);
+	glVertex3f(235.0, 80.0, 328.5);
+	glVertex3f(240.0, 80.0, 329.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(240.0, 55.0, 327.0);
+	glVertex3f(235.0, 55.0, 326.5);
+	glVertex3f(235.0, 80.0, 326.5);
+	glVertex3f(240.0, 80.0, 327.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(240.0, 55.0, 329.0);
+	glVertex3f(240.0, 55.0, 327.0);
+	glVertex3f(240.0, 80.0, 327.0);
+	glVertex3f(240.0, 80.0, 329.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(235.0, 55.0, 328.5);
+	glVertex3f(235.0, 55.0, 326.5);
+	glVertex3f(235.0, 80.0, 326.5);
+	glVertex3f(235.0, 80.0, 328.5);
+	glEnd();
+
+	// pilar 6
+
+	glBegin(GL_POLYGON);
+	glVertex3f(210.0, 55.0, 324.5);
+	glVertex3f(205.0, 55.0, 324.0);
+	glVertex3f(205.0, 80.0, 324.0);
+	glVertex3f(210.0, 80.0, 324.5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(210.0, 55.0, 322.5);
+	glVertex3f(205.0, 55.0, 322.0);
+	glVertex3f(205.0, 80.0, 322.0);
+	glVertex3f(210.0, 80.0, 322.5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(210.0, 55.0, 324.5);
+	glVertex3f(210.0, 55.0, 322.5);
+	glVertex3f(210.0, 80.0, 322.5);
+	glVertex3f(210.0, 80.0, 324.5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(205.0, 55.0, 324.0);
+	glVertex3f(205.0, 55.0, 322.0);
+	glVertex3f(205.0, 80.0, 322.0);
+	glVertex3f(205.0, 80.0, 324.0);
+	glEnd();
+
+
+	//detail depan
+	/*
+	glColor3fv(color.grey);
+	glBegin(GL_POLYGON);
+	glVertex3f(375.0, 80.0, 346.0);
+	glVertex3f(200.0, 80.0, 321.0);
+	glVertex3f(200.0, 60.0, 321.0);
+	glVertex3f(375.0, 60.0, 346.0);
 	glEnd();
 
 	glColor3f(0.3, 0.3, 0.3);
-	//detail depan
 	glBegin(GL_POLYGON);
-	glVertex3f(310.0, 55.0, 341.0);
-	glVertex3f(270.0, 55.0, 335.0);
+	glVertex3f(310.0, 60.0, 341.0);
+	glVertex3f(270.0, 60.0, 335.0);
 	glVertex3f(270.0, 80.0, 335.0);
 	glVertex3f(310.0, 80.0, 341.0);
+	glEnd();*/
+
+	glColor3fv(color.white);
+	//depan-atas
+	glBegin(GL_POLYGON);
+	glVertex3f(375.0, 80.0, 350.0);
+	glVertex3f(200.0, 80.0, 325.0);
+	glVertex3f(200.0, 100.0, 325.0);
+	glVertex3f(375.0, 100.0, 350.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(375.0, 80.0, 350.0);
+	glVertex3f(200.0, 80.0, 325.0);
+	glVertex3f(200.0, 80.0, 100.0);
+	glVertex3f(375.0, 80.0, 100.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(375.0, 80.0, 100.0);
+	glVertex3f(375.0, 80.0, 350.0);
+	glVertex3f(375.0, 100.0, 350.0);
+	glVertex3f(375.0, 100.0, 100.0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(200.0, 80.0, 100.0);
+	glVertex3f(200.0, 80.0, 325.0);
+	glVertex3f(200.0, 100.0, 325.0);
+	glVertex3f(200.0, 100.0, 100.0);
 	glEnd();
 
 	glColor4f(0.4, 0.4, 0.4, 0.5);
