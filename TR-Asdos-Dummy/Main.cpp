@@ -2,7 +2,7 @@
 #include <GL/freeglut.h>
 using namespace std;
 
-bool mouseDown = false;
+bool mouseDown = false; 
 
 float xrot = 0.0f;
 float yrot = 0.0f;
@@ -149,7 +149,7 @@ void drawBuildingA() {
 	glColor3fv(color.white);
 	//depan-atas
 	glBegin(GL_POLYGON);
-	glVertex3f(375.0, 80.0, 350.0);
+	glVertex3f(375.0, 80.0, 350.0); 
 	glVertex3f(200.0, 80.0, 325.0);
 	glVertex3f(200.0, 100.0, 325.0);
 	glVertex3f(375.0, 100.0, 350.0);
@@ -493,7 +493,7 @@ void drawBuildingB() {
 	glVertex3f(250.0, 55.0, -300.0); //M
 	glVertex3f(375.0, 55.0, -300.0); //N
 	glEnd();
-
+	
 	glColor3f(0.9, 0.9, 0.9);
 	//atas
 	glBegin(GL_POLYGON);
@@ -656,7 +656,6 @@ void drawBuildingB() {
 		spacingB += 20;
 	}
 
-
 	glColor3fv(color.lightGrey);
 	//topdetail
 	//bawah
@@ -806,8 +805,8 @@ void drawBuildingC() {
 	//detail
 	glColor3fv(color.white);
 	glBegin(GL_LINE_LOOP);
-	glVertex3f(0.0, 520.0, 300.0); glVertex3f(125.0, 520.0, 315.0);
-	glVertex3f(125.0, 520.0, 50.0); glVertex3f(0.0, 520.0, 35.0);
+	glVertex3f(0.0, 520.0, 300.0); glVertex3f(125.0, 520.0, 315.0); 
+	glVertex3f(125.0, 520.0, 50.0); glVertex3f(0.0, 520.0, 35.0); 
 	glEnd();
 
 	glColor4fv(color.line);
@@ -822,10 +821,10 @@ void drawBuildingC() {
 
 	glColor3fv(color.grey);
 	glBegin(GL_POLYGON);
-	glVertex3f(-1.0, 200.0, 250.0);
-	glVertex3f(-1.0, 200.0, 85.0);
-	glVertex3f(-1.0, 519.5, 85.0);
-	glVertex3f(-1.0, 519.5, 250.0);
+	glVertex3f(-1.0, 200.0, 250.0); 
+	glVertex3f(-1.0, 200.0, 85.0); 
+	glVertex3f(-1.0, 519.5, 85.0); 
+	glVertex3f(-1.0, 519.5, 250.0); 
 	glEnd();
 
 	glColor4fv(color.line);
@@ -912,6 +911,7 @@ void drawBuildingC() {
 	glVertex3f(0.0, 200.0, 34.5); //Q-up
 	glVertex3f(125.0, 200.0, 49.5); //R-up
 	glEnd();
+
 
 	//top detail
 	glColor3fv(color.lightGrey);
@@ -1049,7 +1049,7 @@ void drawBuildingD() {
 	glVertex3f(-250.0, 55.0, 200.0); //W
 	glVertex3f(-250.0, 650.0, 200.0); //W
 	glVertex3f(-400.0, 650.0, 200.0); //V
-	glEnd();
+	glEnd();		   
 
 	//kanan
 	glBegin(GL_POLYGON);
@@ -1150,7 +1150,7 @@ void drawBuildingD() {
 		spacingB -= 10.0;
 	}
 
-	glColor3f(1.0, 1.0, 1.0);
+	glColor3f(1.0,1.0,1.0);
 	//depan1
 	glBegin(GL_POLYGON);
 	glVertex3f(-250.0, 55.0, 275.5); //S
@@ -1498,7 +1498,7 @@ void drawBuildingG() {
 	glVertex3f(-450.0, 200.0, 0.0);
 	glVertex3f(125.0, 200.0, 0.0);
 	glEnd();
-
+	
 	//depan
 	glBegin(GL_POLYGON);
 	glVertex3f(125.0, 55.0, 314.0); //O
@@ -1538,21 +1538,21 @@ void myTree(float startPoint) {
 	glColor3ub(139, 69, 19);
 	glBegin(GL_QUADS);
 	glVertex3f(startPoint, 55, 340);
-	glVertex3f(startPoint - 10, 55, 340);
-	glVertex3f(startPoint - 10, 120, 340);
+	glVertex3f(startPoint-10, 55, 340);
+	glVertex3f(startPoint -10, 120, 340);
 	glVertex3f(startPoint, 120, 340);
 	glEnd();
 	glBegin(GL_QUADS);
 	glVertex3f(startPoint, 55, 330);
-	glVertex3f(startPoint - 10, 55, 330);
-	glVertex3f(startPoint - 10, 120, 330);
+	glVertex3f(startPoint -10, 55, 330);
+	glVertex3f(startPoint -10, 120, 330);
 	glVertex3f(startPoint, 120, 330);
 	glEnd();
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint - 10, 55, 330);
-	glVertex3f(startPoint - 10, 55, 340);
-	glVertex3f(startPoint - 10, 120, 340);
-	glVertex3f(startPoint - 10, 120, 330);
+	glVertex3f(startPoint -10, 55, 330);
+	glVertex3f(startPoint -10, 55, 340);
+	glVertex3f(startPoint -10, 120, 340);
+	glVertex3f(startPoint -10, 120, 330);
 	glEnd();
 	glBegin(GL_QUADS);
 	glVertex3f(startPoint, 55, 330);
@@ -1564,40 +1564,40 @@ void myTree(float startPoint) {
 	// daun
 	glColor3ub(1, 50, 32);
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint - 20, 90, 380);
-	glVertex3f(startPoint + 20, 90, 380);
-	glVertex3f(startPoint + 20, 90, 300);
-	glVertex3f(startPoint - 20, 90, 300);
+	glVertex3f(startPoint -20, 90, 380);
+	glVertex3f(startPoint+20, 90, 380);
+	glVertex3f(startPoint+20, 90, 300);
+	glVertex3f(startPoint -20, 90, 300);
 	glEnd();
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint - 20, 180, 380);
-	glVertex3f(startPoint + 20, 180, 380);
-	glVertex3f(startPoint + 20, 180, 300);
-	glVertex3f(startPoint - 20, 180, 300);
+	glVertex3f(startPoint -20, 180, 380);
+	glVertex3f(startPoint+20, 180, 380);
+	glVertex3f(startPoint+20, 180, 300);
+	glVertex3f(startPoint -20, 180, 300);
 	glEnd();
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint - 20, 90, 380);
-	glVertex3f(startPoint - 20, 180, 380);
-	glVertex3f(startPoint - 20, 180, 300);
-	glVertex3f(startPoint - 20, 90, 300);
+	glVertex3f(startPoint -20, 90, 380);
+	glVertex3f(startPoint -20, 180, 380);
+	glVertex3f(startPoint -20, 180, 300);
+	glVertex3f(startPoint -20, 90, 300);
 	glEnd();
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint + 20, 90, 380);
-	glVertex3f(startPoint + 20, 180, 380);
-	glVertex3f(startPoint + 20, 180, 300);
-	glVertex3f(startPoint + 20, 90, 300);
+	glVertex3f(startPoint+20, 90, 380);
+	glVertex3f(startPoint+20, 180, 380);
+	glVertex3f(startPoint+20, 180, 300);
+	glVertex3f(startPoint+20, 90, 300);
 	glEnd();
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint - 20, 90, 300);
-	glVertex3f(startPoint + 20, 90, 300);
-	glVertex3f(startPoint + 20, 180, 300);
-	glVertex3f(startPoint - 20, 180, 300);
+	glVertex3f(startPoint -20, 90, 300);
+	glVertex3f(startPoint+20, 90, 300);
+	glVertex3f(startPoint+20, 180, 300);
+	glVertex3f(startPoint -20, 180, 300);
 	glEnd();
 	glBegin(GL_QUADS);
-	glVertex3f(startPoint - 20, 90, 380);
-	glVertex3f(startPoint + 20, 90, 380);
-	glVertex3f(startPoint + 20, 180, 380);
-	glVertex3f(startPoint - 20, 180, 380);
+	glVertex3f(startPoint-20, 90, 380);
+	glVertex3f(startPoint+20, 90, 380);
+	glVertex3f(startPoint+20, 180, 380);
+	glVertex3f(startPoint -20, 180, 380);
 	glEnd();
 }
 
@@ -1736,7 +1736,7 @@ void mouse(int button, int state, int x, int y)
 		mouseDown = false;
 }
 
-void mouseMotion(int x, int y) {
+void mouseMotion(int x, int y){
 	if (mouseDown)
 	{
 		xrot = (y + ydiff) / 150;
@@ -1745,8 +1745,8 @@ void mouseMotion(int x, int y) {
 		glutPostRedisplay();
 
 
-		glRotatef(xrot, 1.0f, 0.0f, 0.0f);
-		glRotatef(yrot, 0.0f, 1.0f, 0.0f);
+		glRotatef(xrot, 1.0f, 0.0f, 0.0f); 
+		glRotatef(yrot, 0.0f, 1.0f, 0.0f); 
 	}
 }
 
@@ -1755,7 +1755,7 @@ void myinit() {
 	glPointSize(2.0);
 	glLineWidth(2.5);
 	glMatrixMode(GL_PROJECTION);
-	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_DEPTH_TEST); 
 	glEnable(GL_LINE_SMOOTH);
 	glEnable(GL_POINT_SMOOTH);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
