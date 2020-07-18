@@ -10,61 +10,10 @@ float yrot = 0.0f;
 float xdiff = 0.0f;
 float ydiff = 0.0f;
 
-void drawRectangle(float x, float y, float z, float dx, float dy, float dz) {
-	// Belakang
-	//glColor3f(1.0, 0.0, 0.0);
-	glBegin(GL_POLYGON);
-	glVertex3f(x - dx, y + dy, z - dz);
-	glVertex3f(x + dx, y + dy, z - dz);
-	glVertex3f(x + dx, y - dy, z - dz);
-	glVertex3f(x - dx, y - dy, z - dz);
-	glEnd();
-
-	// Depan
-	//glColor3f(0.0, 1.0, 0.0);
-	glBegin(GL_POLYGON);
-	glVertex3f(x - dx, y + dy, z + dz);
-	glVertex3f(x + dx, y + dy, z + dz);
-	glVertex3f(x + dx, y - dy, z + dz);
-	glVertex3f(x - dx, y - dy, z + dz);
-	glEnd();
-
-	// Kanan
-	//glColor3f(0.0, 0.0, 1.0);
-	glBegin(GL_POLYGON);
-	glVertex3f(x + dx, y + dy, z - dz);
-	glVertex3f(x + dx, y + dy, z + dz);
-	glVertex3f(x + dx, y - dy, z + dz);
-	glVertex3f(x + dx, y - dy, z - dz);
-	glEnd();
-
-	// Kiri
-	//glColor3f(0.0, 1.0, 1.0);
-	glBegin(GL_POLYGON);
-	glVertex3f(x - dx, y + dy, z - dz);
-	glVertex3f(x - dx, y + dy, z + dz);
-	glVertex3f(x - dx, y - dy, z + dz);
-	glVertex3f(x - dx, y - dy, z - dz);
-	glEnd();
-
-	// Bawah
-	//glColor3f(1.0, 0.0, 1.0);
-	glBegin(GL_POLYGON);
-	glVertex3f(x + dx, y - dy, z - dz);
-	glVertex3f(x - dx, y - dy, z - dz);
-	glVertex3f(x - dx, y - dy, z + dz);
-	glVertex3f(x + dx, y - dy, z + dz);
-	glEnd();
-
-	// Atas
-	//glColor3f(1.0, 1.0, 0.0);
-	glBegin(GL_POLYGON);
-	glVertex3f(x + dx, y + dy, z - dz);
-	glVertex3f(x - dx, y + dy, z - dz);
-	glVertex3f(x - dx, y + dy, z + dz);
-	glVertex3f(x + dx, y + dy, z + dz);
-	glEnd();
-}
+class myColor {
+public:
+	GLfloat glass[3] = { 0.45, 0.749, 0.83 };
+};
 
 void drawOther() {
 	glBegin(GL_POLYGON);
@@ -456,6 +405,8 @@ void drawBuildingB() {
 }
 
 void drawBuildingC() {
+	myColor color;
+
 	glColor3f(0.3, 0.5, 1.0);
 	//bawah
 	glBegin(GL_POLYGON);
@@ -474,7 +425,7 @@ void drawBuildingC() {
 	glVertex3f(0.0, 550.0, 35.0); //Q
 	glEnd();
 
-	glColor3f(0.45, 0.749, 0.83);
+	glColor3fv(color.glass);
 	//depan
 	glBegin(GL_POLYGON);
 	glVertex3f(0.0, 55.0, 300.0); //P
@@ -814,6 +765,7 @@ void display() {
 
 	glPushMatrix();
 	glColor3f(0.0, 1.0, 0.0);
+
 	drawBuildingBase();
 	drawBuildingA();
 	drawBuildingB();
@@ -859,7 +811,11 @@ void keyFun(unsigned char key, int x, int y) {
 	case '2':
 		glScalef(0.975, 0.975, 0.975);
 		break;
+	case 'r':
+		glTranslatef(0.0, 0.0, 0.0);
+		break;
 	}
+
 	glutPostRedisplay();
 }
 
@@ -942,8 +898,8 @@ void myinit() {
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(500, 500);
-	glutInitWindowPosition(0, 0);
+	glutInitWindowSize(1920, 1080);
+	glutInitWindowPosition(-10, -50);
 	glutCreateWindow("Ardian Pramudya Alphita - 672018150");
 
 	glutDisplayFunc(display);
