@@ -1277,6 +1277,15 @@ void drawBuildingE() {
 	glVertex3f(-65.0, 200.0, 199.5); //E1
 	glVertex3f(-200.0, 200.0, 199.5); //D1
 	glEnd();
+
+	//detail kaca depan
+	glColor3fv(color.white);
+	glBegin(GL_POLYGON);
+	glVertex3f(-50.0, 55.0, 300.5); //Z
+	glVertex3f(-65.0, 55.0, 300.5); //A1
+	glVertex3f(-65.0, 350.0, 300.5); //A1
+	glVertex3f(-50.0, 350.0, 300.5); //Z
+	glEnd();
 }
 
 void drawBuildingF() {
